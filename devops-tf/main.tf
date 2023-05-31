@@ -15,10 +15,6 @@ provider "helm" {
   }
 }
 
-provider "kubernetes" {
-  config_path = pathexpand(var.kube_config)
-}
-
 # Source: https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release#example-usage---local-chart
 # Note it may take a while for the deployment to finish because of the initialDelaySeconds in the chart
 resource "helm_release" "devops-helm" {
