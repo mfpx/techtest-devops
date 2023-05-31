@@ -4,14 +4,14 @@
 # Running the script spawns a new shell instance, so this has to be here
 eval "$(minikube -p minikube docker-env)"
 
-if [[ -d techtest-devops-mfpx/.git ]];
+if [[ -d techtest-devops/.git ]];
 then
     # Pull changes - might prompt for password depending on local config
     echo Repo already exists, will pull for latest changes
-    cd techtest-devops-mfpx && git pull && cd ..
+    cd techtest-devops && git pull && cd ..
 else
     # Grab the repo
-    git clone git@github.com:w3w-internal/techtest-devops-mfpx.git
+    git clone git@github.com:mfpx/techtest-devops.git
 fi
 
 # Check if Dockerfile exists

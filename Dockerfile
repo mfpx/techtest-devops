@@ -14,19 +14,19 @@ WORKDIR /app
 # RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 # Clone the repo
-# RUN git clone git@github.com:w3w-internal/techtest-devops-mfpx.git
+# RUN git clone git@github.com:mfpx/techtest-devops.git
 
 # Copy cloned repo to the container
-COPY techtest-devops-mfpx /app/techtest-devops-mfpx
+COPY techtest-devops /app/techtest-devops
 
 # Change to the repo directory
-WORKDIR /app/techtest-devops-mfpx
+WORKDIR /app/techtest-devops
 
 # Compile the application
 RUN go build -o /app
 
 # Delete source
-RUN rm -rf /app/techtest-devops-mfpx
+RUN rm -rf /app/techtest-devops
 
 # Expose the leet port
 EXPOSE 1337
