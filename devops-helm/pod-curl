@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# The point of this is to show that the deployment
+# is publicly accessible. But because of the way
+# I set up my k8s, I can only access the node within the vm
+# In theory, I could make it accessible outside the vm,
+# but I feel like that falls outside the scope of this
+# practice problem.
+POD_IP=$(minikube service devops-helm --url)
+
+curl -i "$POD_IP"/"$1"
