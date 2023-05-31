@@ -21,8 +21,7 @@ Next, we need to install **minikube** I simply followed instructions on their se
 Once the two core parts are installed, we can install optional tools; although **minikube** comes with kubectl, I wanted to install the standalone tool.  
 This can be achieved by following the instructions [here](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).  
 Now, we need to install helm for upcoming tasks. To do this, we can follow the instructions [here](https://helm.sh/docs/intro/install/).  
-Lastly, Ubuntu's repositories contain the **Terraform** binary, so we can run `sudo apt install terraform -y`. Alternatively, we can download the binary 
-directly from **Terraform**'s website, and use it.
+Lastly, Ubuntu's repositories contain the **Terraform** binary, so we can run `sudo apt install terraform -y`. Alternatively, we can download the binary directly from **Terraform**'s website, and use it.
   
 The bulk of setup is done, and we now have several installation packages. We can remove them, as they're not needed, and take up valuable space.
 
